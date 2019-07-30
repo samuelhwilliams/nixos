@@ -47,6 +47,19 @@
   services.plex = {
     enable = true;
     openFirewall = true;
+
+    package = pkgs.plex.overrideAttrs (x: let 
+        version = "1.16.3.1402-22929c8a2";
+        sha1 = "ecccf86341835b7a8319302bf61a8928107460b3";
+      in
+        {
+          name = "plex-${version}";
+          src = pkgs.fetchurl {
+            url = "https://downloads.plex.tv/plex-media-server-new/${version}/redhat/plexmediaserver-${version}.x86_64.rpm";
+            inherit sha1;
+          };
+        }
+      );
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
