@@ -20,6 +20,9 @@
   # Define on which hard drive you want to install Grub.
   boot.loader.grub.device = "/dev/sdc";
 
+  # Support NTFS filesystems
+  boot.supportedFilesystems = [ "ntfs" ];
+
   # Define hostname
   networking.hostName = "companion";
 
