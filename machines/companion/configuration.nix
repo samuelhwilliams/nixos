@@ -40,6 +40,8 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     git
+    parted
+    screen
     vim
     wget
   ];
