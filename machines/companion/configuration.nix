@@ -45,7 +45,13 @@
   ];
 
   # List services that you want to enable:
-  services.openssh.enable = true;
+  services.openssh = {
+    enable = true;
+    permitRootLogin = "no";
+    ports = [ 22 ];
+    openFirewall = true;
+    passwordAuthentication = false; 
+  };
 
   services.plex = {
     enable = true;
