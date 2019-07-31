@@ -18,7 +18,7 @@
   boot.loader.grub.version = 2;
 
   # Define on which hard drive you want to install Grub.
-  boot.loader.grub.device = "/dev/sdc";
+  boot.loader.grub.device = "/dev/sdb";
 
   # Support NTFS filesystems
   boot.supportedFilesystems = [ "ntfs" ];

@@ -18,6 +18,11 @@
       fsType = "ext4";
     };
 
+  fileSystems."/srv/data-1" =
+    { device = "/dev/disk/by-label/data-1";
+      fsType = "ext4";
+    };
+
   swapDevices =
     [ { device = "/dev/disk/by-label/swap"; }
     ];
