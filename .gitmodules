@@ -1,0 +1,20 @@
+[submodule "home-manager"]
+	path = home-manager
+	url = https://github.com/rycee/home-manager
+	branch = release-19.03
+	shallow = true
+[submodule "nixos-19.03"]
+	path = nixos-19.03
+	url = https://github.com/NixOS/nixpkgs-channels
+	branch = nixos-19.03
+	shallow = true
+[submodule "nixpkgs-19.03-darwin"]
+	path = nixpkgs-19.03-darwin
+	url = https://github.com/NixOS/nixpkgs-channels
+	branch = nixpkgs-19.03-darwin
+	shallow = true
+[submodule "nix-darwin"]
+	path = nix-darwin
+	url = https://github.com/LnL7/nix-darwin
+	branch = master
+	shallow = true
