@@ -9,9 +9,9 @@
     };
 
     plugins = [ "vim-nix" ];
-
-    extraConfig = ''
-      syntax on
-      autocmd Filetype gitcommit setlocal spell textwidth=72'';
   };
+
+  home.file.".vimrc".text = ''
+    syntax on
+    autocmd Filetype gitcommit setlocal spell textwidth=72'';
 }
