@@ -4,6 +4,18 @@
 
 { config, pkgs, ... }:
 
+let
+  my-aws-vault = pkgs.aws-vault.overrideAttrs (_: {
+    name = "aws-vault-4.6.2";
+    version = "4.6.2";
+    src = pkgs.fetchFromGitHub {
+      owner = "99designs";
+      repo = "aws-vault";
+      rev = "v4.6.2";
+      sha256 = "163zdw99ar2rdmaz05rm52n98901b0sarsmi011ii3y92f0xg2gf";
+    };
+  });
+in
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -44,6 +56,7 @@
     screen
     vim
     wget
+    my-aws-vault
   ];
 
   # List services that you want to enable:
