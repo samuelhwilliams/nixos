@@ -17,6 +17,7 @@
       gcam = "git commit -a --amend";
       grm = "git rebase master";
       gpo = "git push origin $(get_current_git_branch_name)";
+      gpof = "gpo --force-with-lease";
       grho = "git reset --hard origin/$(get_current_git_branch_name)";
       serve = "python -m http.server";
     };

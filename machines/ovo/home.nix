@@ -1,5 +1,8 @@
 { config, pkgs, ... }:
 
+let
+  aws-vault = pkgs.callPackage ../../custom/aws-vault {};
+in
 {
   imports = [ ../../common/bash ../../common/git ];
 
@@ -10,7 +13,7 @@
     pkgs.watch
     pkgs.terraform
     pkgs.awscli
-    pkgs.aws-vault
+    aws-vault
   ];
 
   home.sessionVariables = {
@@ -20,7 +23,7 @@
   # Let Home Manager install and manage itself.
   programs.home-manager = {
     enable = true;
-    path = "_";
+    path = "../../home-manager";
   };
 
   programs.bash.profileExtra = ''
@@ -28,3 +31,4 @@ export "GPG_TTY=$(tty)"
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 gpg-connect-agent updatestartuptty /bye'';
 }
+
