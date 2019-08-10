@@ -22,15 +22,17 @@
     };
 
     initExtra = ''
-      source ${pkgs.gitAndTools.gitFull}/share/git/contrib/completion/git-prompt.sh
+source ${pkgs.gitAndTools.gitFull}/share/git/contrib/completion/git-prompt.sh
 
-      eval "$(direnv hook bash)"
+eval "$(direnv hook bash)"
 
-      function get_current_git_branch_name() {
-        echo $(git name-rev --name-only HEAD)
-      }
+function get_current_git_branch_name() {
+  echo $(git name-rev --name-only HEAD)
+}
+
+${builtins.readFile ./pyautovenv.sh}
       '';
 
-    profileExtra = builtins.readFile ../.profile;
+      profileExtra = builtins.readFile ../.profile;
   };
 }
