@@ -11,6 +11,7 @@
     pkgs.terraform
     pkgs.awscli
     pkgs.aws-vault
+    pkgs.google-cloud-sdk
   ];
 
   home.sessionVariables = {

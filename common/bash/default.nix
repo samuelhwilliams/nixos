@@ -16,6 +16,7 @@
       gs = "git status";
       gcam = "git commit -a --amend";
       grm = "git rebase master";
+      gfp = "git fetch --prune";
       gpo = "git push origin $(get_current_git_branch_name)";
       grho = "git reset --hard origin/$(get_current_git_branch_name)";
       serve = "python -m http.server";
