@@ -13,5 +13,11 @@
       key = "DD15DA37EC8FF466";
       signByDefault = true;
     };
+
+    extraConfig = {
+      diff = {
+        noprefix = "true";
+      };
+    };
   };
 }
